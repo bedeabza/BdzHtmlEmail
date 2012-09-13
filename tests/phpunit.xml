@@ -1,0 +1,7 @@
+<phpunit bootstrap="./bootstrap.php" colors="false">
+    <testsuites>
+        <testsuite name="BdzHtmlEmail Test Suite">
+            <directory>./</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
