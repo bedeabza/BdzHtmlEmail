@@ -11,6 +11,7 @@
 namespace BdzHtmlEmail;
 
 use BdzHtmlEmail\Exception\InvalidMethodException,
+    BdzHtmlEmail\Exception\MailNotReadyException,
     Zend\View\Resolver\TemplatePathStack as TemplateResolver,
     Zend\View\Model\ViewModel,
     Zend\Mime\Part as MimePart,
@@ -145,6 +146,10 @@ class Email
 
         if (!count($this->viewsDir)) {
             throw new MailNotReadyException("No template stack directories defined in viewsDir");
+        }
+
+        if (!$this->template) {
+            throw new MailNotReadyException("No template was defined");
         }
 
         $this->message->setBody($this->createBody($params));

@@ -21,7 +21,7 @@ use Zend\Di\ServiceLocatorInterface as ServiceLocator,
 class EmailFactory implements ServiceLocatorAwareInterface
 {
     /**
-     * @var \Zend\Di\ServiceLocatorInterface
+     * @var \Zend\ServiceManager\ServiceLocatorInterface
      */
     protected $serviceLocator;
 
@@ -59,7 +59,7 @@ class EmailFactory implements ServiceLocatorAwareInterface
     /**
      * @param \Zend\ServiceManager\ServiceLocatorInterface $serviceLocator
      */
-    public function setServiceLocator (ServiceLocatorInterface $serviceLocator)
+    public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
         $this->serviceLocator = $serviceLocator;
     }
