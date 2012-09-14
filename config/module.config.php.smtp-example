@@ -1,0 +1,41 @@
+<?php
+return array(
+    'di' => array(
+        'instance' => array(
+            'BdzHtmlEmail\Email' => array(
+                'parameters' => array(
+                    'viewsDir'  => array(
+                        dirname(__DIR__) . '/view/bdz-html-email/example'
+                    ),
+                    'transport'         => 'bdz-email-transport',
+                    'message'           => 'bdz-email-message',
+                    'templateRenderer'  => 'bdz-email-renderer',
+                    'template'          => 'example'
+                )
+            ),
+            'Zend\Mail\Transport\Smtp' => array(
+                'parameters' => array(
+                    'options' => 'bdz-email-smtp-options'
+                )
+            ),
+            'Zend\Mail\Transport\SmtpOptions' => array(
+                'parameters' => array(
+                    'name' => '', // host here
+                    'host' => '', // host here
+                    'connectionClass' => 'login',
+                    'connectionConfig' => array(
+                        'username' => 'username@domain',
+                        'password' => '********'
+                    )
+                )
+            ),
+            'aliases' => array(
+                'bdz-email'                 => 'BdzHtmlEmail\Email',
+                'bdz-email-transport'       => 'Zend\Mail\Transport\Smtp',
+                'bdz-email-message'         => 'Zend\Mail\Message',
+                'bdz-email-smtp-options'    => 'Zend\Mail\Transport\SmtpOptions',
+                'bdz-email-renderer'        => 'Zend\View\Renderer\PhpRenderer'
+            )
+        ),
+    )
+);
