@@ -162,7 +162,7 @@ class Email
      * @param array $params
      * @return \Zend\Mime\Message
      */
-    protected function createBody(array $params = array())
+    public function createBody(array $params = array())
     {
         $this->templateRenderer->setResolver(new TemplateResolver(array('script_paths' => $this->viewsDir)));
 
