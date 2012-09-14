@@ -1,0 +1,26 @@
+{
+    "name": "bedeabza/bdz-html-email",
+    "description": "Zend Framework 2 module for sending HTML emails using ZF2 layouts",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "mail"
+    ],
+    "homepage": "https://github.com/bedeabza/BdzHtmlEmail",
+    "authors": [
+        {
+            "name": "Dragos Badea",
+            "email": "bedeabza@gmail.com",
+            "homepage": "https://github.com/bedeabza"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": ">=2.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "BdzHtmlEmail": "src/"
+        }
+    }
+}
