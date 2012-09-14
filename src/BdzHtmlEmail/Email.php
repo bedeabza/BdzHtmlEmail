@@ -160,6 +160,10 @@ class Email
             $this->message->setTo($overrideTo);
         }
 
+        if (!count($this->getMessage()->getTo())) {
+            throw new MailNotReadyException("Please specify a to address");
+        }
+
         $this->transport->send($this->message);
     }
 
