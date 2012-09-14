@@ -20,10 +20,15 @@
  * Never commit plaintext passwords to the source code repository.
  */
 
-$path = realpath(__DIR__ . '/../../../vendor/ZF2/library');
+$vendorPath = __DIR__;
+do {
+    $vendorPath = dirname($vendorPath);
+} while (basename($vendorPath) != 'vendor');
+
+$path = realpath($vendorPath . '/ZF2/library');
 if(!$path){
     //for composer installed package
-    $path = realpath(__DIR__ . '/../../../vendor/zendframework/zendframework/library');
+    $path = realpath($vendorPath . '/zendframework/zendframework/library');
 }
 
 define('ZF2_PATH', $path);
