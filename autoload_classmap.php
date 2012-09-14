@@ -1,5 +1,6 @@
 <?php
 return array(
+    'BdzHtmlEmail\Module' => dirname(__FILE__) . '/Module.php',
     'BdzHtmlEmail\Email' => dirname(__FILE__) . '/src/BdzHtmlEmail/Email.php',
     'BdzHtmlEmail\EmailFactory' => dirname(__FILE__) . '/src/BdzHtmlEmail/EmailFactory.php',
     'BdzHtmlEmail\Exception\BadMethodCallException' => dirname(__FILE__) . '/src/BdzHtmlEmail/Exception/BadMethodCallException.php',
