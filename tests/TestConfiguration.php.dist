@@ -43,4 +43,4 @@ define('MODULE_NAME', 'BdzHtmlEmail');
 // );
 
 // Add dependencies, for example a vendor may create several modules that all depend on a common library
-// $moduleDependencies = array('SomeVendor');
+//$moduleDependencies = array('SomeVendor');

@@ -73,7 +73,12 @@ if (method_exists($moduleTestCaseClassname, 'setLocator')) {
     $config = $defaultListeners->getConfigListener()->getMergedConfig();
 
     $di = new \Zend\Di\Di;
+
+    $serviceManager = new \Zend\ServiceManager\ServiceManager();
+    $serviceManager->setService('di', $di);
+
     $di->instanceManager()->addTypePreference('Zend\Di\LocatorInterface', $di);
+    $di->instanceManager()->addTypePreference('Zend\ServiceManager\ServiceLocatorInterface', $serviceManager);
 
     if (isset($config['di'])) {
         $diConfig = new \Zend\Di\Config($config['di']);
