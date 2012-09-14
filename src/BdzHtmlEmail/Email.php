@@ -48,7 +48,7 @@ class Email
     /**
      * @param \Zend\Mail\Transport\TransportInterface $transport
      */
-    public function setTransport($transport)
+    public function setTransport(\Zend\Mail\Transport\TransportInterface $transport)
     {
         $this->transport = $transport;
     }
@@ -64,7 +64,7 @@ class Email
     /**
      * @param \Zend\Mail\Message $message
      */
-    public function setMessage($message)
+    public function setMessage(\Zend\Mail\Message $message)
     {
         $this->message = $message;
     }
@@ -113,7 +113,7 @@ class Email
     /**
      * @param \Zend\View\Renderer\RendererInterface $templateRenderer
      */
-    public function setTemplateRenderer($templateRenderer)
+    public function setTemplateRenderer(\Zend\View\Renderer\RendererInterface $templateRenderer)
     {
         $this->templateRenderer = $templateRenderer;
     }
