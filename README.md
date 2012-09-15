@@ -5,6 +5,20 @@ The module handles the HTML rendering of templates and offers the possibility of
 
 ## Installation
 
+### Composer
+
+Add the following to your `composer.json` file:
+
+```php
+"require": {
+    "bedeabza/bdz-html-email": "dev-master"
+}
+```
+
+Then run `php composer.phar install`
+
+### Manually
+
 In order to start using the module clone the repo in your vendor directory or add it as a submodule if you're already using git for your project:
 
     git clone git@github.com:bedeabza/BdzHtmlEmail.git vendor/BdzHtmlEmail
